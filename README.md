@@ -7,18 +7,22 @@ https://medium.com/@aminesnoussi7/orchestrating-dbt-on-snowflake-using-apache-ai
 Docker
 
 ### Usage
-#### Setting the right Airflow user
-You can also manually create an .env file in the same folder as docker-compose.yaml with this content to get rid of the warning
-```
-AIRFLOW_UID=50000
-```
 
 #### Initialize the database
 ```bash
 docker compose up airflow-init
 ```
 
-#### start
+#### Run Airflow
 ```bash
 docker compose -f docker-compose.yml --build up
 ```
+
+#### Web Interface link
+```
+localhost:8080
+```
+More [methods](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#accessing-the-web-interface)
+
+###
+General Details on [Dockerize Airflow](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#accessing-the-web-interface)
