@@ -7,6 +7,10 @@ https://medium.com/@aminesnoussi7/orchestrating-dbt-on-snowflake-using-apache-ai
 Docker
 
 ### Usage
+#### Build image
+```bash
+docker compose build
+```
 
 #### Initialize the database
 ```bash
@@ -15,7 +19,12 @@ docker compose up airflow-init
 
 #### Run Airflow
 ```bash
-docker compose -f docker-compose.yml --build up
+docker compose up --build
+```
+
+#### Stop Airflow
+```bash
+docker stop $(docker ps -qa) && sudo chown nxydx dags/*.* && sudo rm -rf logs && mkdir logs
 ```
 
 #### Web Interface link
