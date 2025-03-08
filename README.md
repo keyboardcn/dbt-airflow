@@ -7,6 +7,18 @@ https://medium.com/@aminesnoussi7/orchestrating-dbt-on-snowflake-using-apache-ai
 Docker
 
 ### Usage
+
+#### Setup
+Get id
+```bash
+AIRFLOW_UID=$(id -u)
+echo $AIRFLOW_UID
+```
+Change .env, set AIRFLOW_UID=$AIRFLOW_UID 
+```
+AIRFLOW_UID=
+```
+
 #### Build image
 ```bash
 docker compose build
