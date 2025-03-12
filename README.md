@@ -31,7 +31,7 @@ docker compose up airflow-init
 
 #### Run Airflow
 ```bash
-docker compose up --build
+docker compose up
 ```
 
 #### Stop Airflow

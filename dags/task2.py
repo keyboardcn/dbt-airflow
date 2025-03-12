@@ -27,7 +27,7 @@ dag = DAG(
 def data_transform_task(dag_dummy: DAG) -> BashOperator:
     return BashOperator(
         task_id='daily_transform',
-        bash_command= 'cd /dbt && echo "hello2" >> task.txt && echo hello task 2',
+        bash_command= 'cd /dbt && echo "hello2" >> test.txt && echo hello task 2',
         # bash_command='cd /dbt && dbt run --models transform --profiles-dir .',
         env={
             # Commented out as we not use
